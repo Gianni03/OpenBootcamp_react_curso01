@@ -3,6 +3,7 @@ import './App.css';
 import Greeting from './components/pure/Greeting';
 import GreetingFunc from './components/pure/GreetingFunc';
 import TaskListComponent from './components/container/task_list';
+import ContactoListadoComponente from './components/container/ContactoListadoComponente';
 
 function App() {
 
@@ -15,7 +16,11 @@ function App() {
         {/* <GreetingFunc name="Gianni"></GreetingFunc> */}
 
         {/* componente de listado de tareas */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
+
+
+        {/* ejercicio de las primeras clases */}
+        <ContactoListadoComponente></ContactoListadoComponente>
       </header>
     </div>
   );
