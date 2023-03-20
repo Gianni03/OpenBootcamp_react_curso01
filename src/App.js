@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // import Ejemplo4 from './hooks/ejemplo4';
 // import MiComponenteConContexto from './hooks/ejemplo3';
@@ -6,7 +6,7 @@ import './App.css';
 // import Ejemplo1 from './hooks/ejemplo1';
 // import Greeting from './components/pure/Greeting';
 // import GreetingFunc from './components/pure/GreetingFunc';
-// import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/GreetingStyled';
 // import ContactoListadoComponente from './components/container/ContactoListadoComponente';
 
@@ -14,14 +14,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         
         {/* <Greeting name="Gianni"></Greeting> */}
         {/* <GreetingFunc name="Gianni"></GreetingFunc> */}
 
         {/* componente de listado de tareas */}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
 
 
         {/* ejercicio de las primeras clases */}
@@ -38,7 +38,7 @@ function App() {
 
         {/* uso de estilos, css, scss, estilos en constantes */}
         {/* <GreetingStyled name="Gianni"></GreetingStyled> */}
-      </header>
+      {/* </header> */}
     </div>
   );
 }
