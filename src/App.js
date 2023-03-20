@@ -7,7 +7,7 @@ import './App.css';
 // import Greeting from './components/pure/Greeting';
 // import GreetingFunc from './components/pure/GreetingFunc';
 // import TaskListComponent from './components/container/task_list';
-import GreetingStyled from './components/pure/GreetingStyled';
+// import GreetingStyled from './components/pure/GreetingStyled';
 // import ContactoListadoComponente from './components/container/ContactoListadoComponente';
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
         </Ejemplo4> */}
 
         {/* uso de estilos, css, scss, estilos en constantes */}
-        <GreetingStyled name="Gianni"></GreetingStyled>
+        {/* <GreetingStyled name="Gianni"></GreetingStyled> */}
       </header>
     </div>
   );
