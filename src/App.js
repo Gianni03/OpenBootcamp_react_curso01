@@ -1,12 +1,13 @@
 // import logo from './logo.svg';
 import './App.css';
+import Father from './components/container/father';
 // import Ejemplo4 from './hooks/ejemplo4';
 // import MiComponenteConContexto from './hooks/ejemplo3';
 // import Ejemplo2 from './hooks/ejemplo2';
 // import Ejemplo1 from './hooks/ejemplo1';
 // import Greeting from './components/pure/Greeting';
 // import GreetingFunc from './components/pure/GreetingFunc';
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
 // import GreetingStyled from './components/pure/GreetingStyled';
 // import ContactoListadoComponente from './components/container/ContactoListadoComponente';
 
@@ -21,7 +22,7 @@ function App() {
         {/* <GreetingFunc name="Gianni"></GreetingFunc> */}
 
         {/* componente de listado de tareas */}
-        <TaskListComponent></TaskListComponent>
+        {/* <TaskListComponent></TaskListComponent> */}
 
 
         {/* ejercicio de las primeras clases */}
@@ -39,6 +40,10 @@ function App() {
         {/* uso de estilos, css, scss, estilos en constantes */}
         {/* <GreetingStyled name="Gianni"></GreetingStyled> */}
       {/* </header> */}
+
+
+      {/* Gestion de eventos */}
+      <Father></Father>
     </div>
   );
 }
