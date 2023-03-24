@@ -13,7 +13,7 @@ const TaskListComponent = () => {
   const defaultTask3 = new Task('Example3', 'description3', false, LEVELS.BLOKING);
 
   // estado del componente
-  const [task, setTask] = useState([defaultTask1, defaultTask2, defaultTask3]);
+  const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
   const [loading, setLoading] = useState(true);
 
   // control del ciclo de vida
@@ -21,13 +21,32 @@ const TaskListComponent = () => {
     console.log("modificacion de tareas")
     setLoading(false);
     return () => {
-      console.log("task lis comp to unmount")
+      console.log("task list comp to unmount")
     };
-  }, [task]);
+  }, [tasks]);
 
 
-  const changeCompleted = (id) => {
-    console.log("to do: cambiar estado de una tarea")
+  function completeTask(task) {
+    console.log("Complete this Task: ", task);
+    const index = tasks.indexOf(task);
+    const tempTask = [...tasks];
+    tempTask[index].complete = !tempTask[index].complete;
+    setTasks(tempTask);
+  }
+
+  function deleteTask(task){
+    console.log("delete this Task: ", task);
+    const index = tasks.indexOf(task);
+    const tempTask = [...tasks];
+    tempTask.splice(index,1);
+    setTasks(tempTask);
+  }
+
+  function addTask(task){
+    console.log("delete this Task: ", task);
+    const tempTask = [...tasks];
+    tempTask.push(task);
+    setTasks(tempTask);
   }
 
   return (
@@ -49,9 +68,14 @@ const TaskListComponent = () => {
             </thead>
             <tbody>
               {/* iterar sobre una lista de tareas */}
-              { task.map((task, index) => {
+              { tasks.map((task, index) => {
                 return (
-                  <TaskComponent key={index} task={ task }>
+                  <TaskComponent
+                  key={index} 
+                  task={ task }
+                  complete={completeTask}
+                  remove={deleteTask}
+                  >
                   </TaskComponent>
                 )
               } )}
@@ -60,10 +84,10 @@ const TaskListComponent = () => {
             </tbody>
           </table>
           </div>
-          <TaskForm></TaskForm>
         </div>
       
       </div>
+          <TaskForm add={addTask}></TaskForm>
       {/* TODO aplicar un for/loop para renderizar una lista */}
       {/* <TaskComponent task={ defaultTask }></TaskComponent> */}
     </div>
