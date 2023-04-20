@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-// import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 // import Father from './components/container/father';
 // import Ejemplo4 from './hooks/ejemplo4';
 // import MiComponenteConContexto from './hooks/ejemplo3';
@@ -10,7 +10,7 @@ import './App.css';
 // import GreetingFunc from './components/pure/GreetingFunc';
 // import GreetingStyled from './components/pure/GreetingStyled';
 // import ContactoListadoComponente from './components/container/ContactoListadoComponente';
-import OptionalRender from './components/pure/optionalRender';
+// import OptionalRender from './components/pure/optionalRender';
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
         {/* <GreetingFunc name="Gianni"></GreetingFunc> */}
 
         {/* componente de listado de tareas - PROYECTO*/}
-        {/* <TaskListComponent></TaskListComponent> */}
+        <TaskListComponent></TaskListComponent>
 
 
         {/* ejercicio de las primeras clases */}
@@ -47,7 +47,7 @@ function App() {
       {/* <Father></Father> */}
 
       {/* renderizado condicional */}
-      <OptionalRender></OptionalRender>
+      {/* <OptionalRender></OptionalRender> */}
     </div>
   );
 }
